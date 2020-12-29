@@ -14,13 +14,14 @@ use App\Http\Controllers\SearchController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::namespace('Admin')->prefix('admin')->group(function () {
+Route::middleware('auth')->namespace('Admin')->prefix('admin')->group(function () {
     Route::resource('article', ArticleController::class);
     Route::resource('header', HeaderController::class);
 });
 
-Route::resource('home', HomeController::class);
+Route::resource('/', HomeController::class);
 Route::get('search', [SearchController::class, 'index']);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');

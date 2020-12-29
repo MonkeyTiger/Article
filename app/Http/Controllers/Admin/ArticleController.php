@@ -50,9 +50,11 @@ class ArticleController extends Controller
     public function update(Request $request, $id)
     {
         $article = Article::find($id);
+        $filename = date('YmdHis') . '.' . $request->file('image')->extension();
+        $request->file('image')->storeAs('public/images/', $filename);
         $article->title = $request->title;
         $article->slug = implode('-', explode(' ', $request->title));
-        $article->image = $request->image;
+        $article->image = $filename;
         $article->content = $request->content;
 
         if ($article->save()) {

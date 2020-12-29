@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    var token = $('meta[name="csrf_token"]').attr('content')
 
     $('#save').click(function() {
         if ($('#title').val() === '') {
@@ -12,15 +11,16 @@ $(document).ready(function() {
             var url = gSiteURL + 'admin/article';
             var method = 'POST';
             var formData = new FormData();
-            formData.append('_token', token);
-            formData.append('title', $('#title').val());
-            formData.append('image', $('#image')[0].files[0]);
-            formData.append('content', $('#content').val());
 
             if ($('#action').val() !== 'create') {
                 url += '/' + $('#selected-article').val();
                 method = 'PUT';
             }
+
+            formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
+            formData.append('title', $('#title').val());
+            formData.append('image', $('#image')[0].files[0]);
+            formData.append('content', $('#content').val());
 
             $.ajax({
                 url: url,
@@ -66,7 +66,6 @@ $(document).ready(function() {
         $('#selected-article').val(article.id);
 
         $('#article-modal #title').val(article.title);
-        // $('#article-modal #image').val(article.image);
         $('#article-modal #content').val(article.content);
         $('#article-modal').modal('show');
     });
