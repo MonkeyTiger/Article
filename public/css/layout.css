@@ -1,0 +1,114 @@
+body {
+    font-family: cursive;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+#sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background: #1E1E2D;
+}
+
+#sidebar .title {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFF;
+    text-align: center;
+    padding: 10px 0 20px;
+}
+
+#sidebar .menu {
+    padding-left: 0;
+}
+
+#sidebar .menu li {
+    list-style-type: none;
+    cursor: pointer;
+}
+
+#sidebar .menu li:hover {
+    background: #FFF;
+}
+
+#sidebar .menu li:hover a {
+    color: #1E1E2D;
+}
+
+#sidebar .menu li a {
+    width: 100%;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 0 10px 20px;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#layout-content {
+    width: calc(100% - 250px);
+}
+
+#layout-content .navbar {
+    width: 100%;
+    height: 50px;
+    background: #E9ECEF;
+}
+
+#layout-content .navbar button {
+    color: #000;
+}
+
+#layout-content .breadcrumb {
+    background: none;
+}
+
+#layout-content .page-container {
+    padding: 10px 50px;
+}
+
+table td {
+    overflow-wrap: anywhere;
+}
+
+.article {
+    border-bottom: 2px solid #ddd;
+}
+
+.article .title {
+    color: #00A3E4;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.article .read-more {
+    color: #00A3E4;
+}
+
+.user-menu {
+    background: #999;
+    margin-bottom: 30px;
+}
+
+.user-menu ul {
+    display: flex;
+    padding-left: 0px;
+    margin-bottom: 0;
+}
+
+.user-menu ul li {
+    margin: 0 20px;
+    list-style-type: none;
+}
+
+.user-menu ul li a {
+    color: #FFF;
+}
