@@ -77,9 +77,8 @@ $(document).ready(function() {
     }
 
     $("#header-modal").on('hidden.bs.modal', function() {
-        $('#title').val('');
-        $('#image').val('');
-        $('#content').val('');
+        $('#name').val('');
+        $('#link').val('');
         $('#action').val('create');
         $('#selected-header').val('0');
         $('#save').text('Save');

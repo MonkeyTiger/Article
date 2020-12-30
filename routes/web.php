@@ -22,6 +22,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->group(function (
 
 Route::resource('/', HomeController::class);
 Route::get('search', [SearchController::class, 'index']);
+Route::get('logout', '\App\Http\Controllers\LoginController@logout');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');

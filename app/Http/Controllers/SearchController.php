@@ -24,7 +24,7 @@ class SearchController extends Controller
             $title = $artcle['title'];
             $articles[$key]['title'] = str_replace(
                 $searchKey,
-                '<span style="background: yellow">' . $searchKey . '</span>',
+                '<span style="background: yellow; color: black;">' . $searchKey . '</span>',
                 $title
             );
 

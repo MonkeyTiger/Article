@@ -20,19 +20,17 @@
       <ul class="menu">
         <li><a href="{{env('APP_URL')}}admin/article">Article manage</a></li>
         <li><a href="{{env('APP_URL')}}admin/header">Header structure</a></li>
-        <!-- <li><a href="#">footer structure</a></li> -->
       </ul>
     </div>
     <div id="layout-content">
       <div class="navbar d-flex justify-content-end">
-        <button class="btn btn-link">Logout</button>
+        <a href="{{env('APP_URL')}}logout" class="btn btn-link logout">Logout</a>
       </div>
       <div class="breadcrumb">@yield('breadcrumb')</div>
       <div class="page-container">
         @yield('page')
       </div>
     </div>
-
 </body>
 
 </html>

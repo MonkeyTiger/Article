@@ -23,7 +23,7 @@
     <div class="navbar user-menu">
       <ul>
         @foreach($headers as $key => $header)
-        <li><a href="{{env('APP_URL')}}{{$header->link}}">{{$header->name}}</a></li>
+        <li><a href="{{$header->link}}">{{$header->name}}</a></li>
         @endforeach
       </ul>
     </div>
