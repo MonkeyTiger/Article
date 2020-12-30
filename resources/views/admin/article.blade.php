@@ -28,7 +28,7 @@
         <tr tid="{{$article->id}}">
           <td>{{$key + 1}}</td>
           <td>{{$article->title}}</td>
-          <td>{{$article->image}}</td>
+          <td><img src="{{env('APP_URL')}}storage/images/{{$article->image}}" width="150" /></td>
           <td>{{$article->content}}</td>
           <td>{{$article->created_at}}</td>
           <td>

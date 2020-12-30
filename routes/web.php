@@ -16,6 +16,7 @@ use App\Http\Controllers\SearchController;
 
 Route::middleware('auth')->namespace('Admin')->prefix('admin')->group(function () {
     Route::resource('article', ArticleController::class);
+    Route::post('article/update-article/{id}', [App\Http\Controllers\Admin\ArticleController::class, 'updateArticle']);
     Route::resource('header', HeaderController::class);
 });
 

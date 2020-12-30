@@ -112,3 +112,7 @@ table td {
 .user-menu ul li a {
     color: #FFF;
 }
+
+table td {
+    vertical-align: middle !important;
+}

@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    var token = $('meta[name="csrf_token"]').attr('content')
+    var token = $('meta[name="csrf-token"]').attr('content')
 
     $('#save').click(function() {
         if ($('#name').val() === '') {

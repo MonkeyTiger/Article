@@ -47,9 +47,10 @@ class ArticleController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function updateArticle(Request $request, $id)
     {
         $article = Article::find($id);
+        Storage::delete('public/images/' . $article->image);
         $filename = date('YmdHis') . '.' . $request->file('image')->extension();
         $request->file('image')->storeAs('public/images/', $filename);
         $article->title = $request->title;

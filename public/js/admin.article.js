@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    var token = $('meta[name="csrf-token"]').attr('content');
 
     $('#save').click(function() {
         if ($('#title').val() === '') {
@@ -13,11 +14,8 @@ $(document).ready(function() {
             var formData = new FormData();
 
             if ($('#action').val() !== 'create') {
-                url += '/' + $('#selected-article').val();
-                method = 'PUT';
+                url += '/update-article/' + $('#selected-article').val();
             }
-
-            formData.append('_token', $('meta[name="csrf-token"]').attr('content'));
             formData.append('title', $('#title').val());
             formData.append('image', $('#image')[0].files[0]);
             formData.append('content', $('#content').val());
@@ -25,6 +23,7 @@ $(document).ready(function() {
             $.ajax({
                 url: url,
                 method: method,
+                headers: { 'X-CSRF-Token': token },
                 processData: false,
                 contentType: false,
                 data: formData,

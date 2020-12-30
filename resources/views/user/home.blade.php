@@ -18,7 +18,7 @@
             </a>
           </div>
           <div class="col-12 col-lg-4">
-            <img src="{{asset('storage/images')}}/{{$article->image}}" alt="" class="w-100">
+            <img src="storage/images/{{$article->image}}" alt="" class="w-100">
           </div>
         </div>
       </div>
