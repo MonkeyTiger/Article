@@ -11,7 +11,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body class="user-body">
   <div class="container">
     <div class="header d-flex justify-content-between align-items-end px-5 py-2 border-bottom">
       <img src="{{asset('/imgs/logo.jpg')}}" alt="">
@@ -28,6 +28,19 @@
       </ul>
     </div>
     @yield('page')
+
+    <div class="footer d-flex justify-content-between">
+      @foreach($footers as $key => $footer)
+      <div>
+        <p>{{$key}}</p>
+        <ul>
+          @foreach($footer as $child)
+          <li><a href="{{$child->link}}">{{$child->name}}</a></li>
+          @endforeach
+        </ul>
+      </div>
+      @endforeach
+    </div>
 
   </div>
   </div>

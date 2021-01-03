@@ -18,6 +18,7 @@ Route::middleware('auth')->namespace('Admin')->prefix('admin')->group(function (
     Route::resource('article', ArticleController::class);
     Route::post('article/update-article/{id}', [App\Http\Controllers\Admin\ArticleController::class, 'updateArticle']);
     Route::resource('header', HeaderController::class);
+    Route::resource('footer', FooterController::class);
 });
 
 Route::resource('/', HomeController::class);

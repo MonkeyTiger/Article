@@ -27,6 +27,7 @@
   </div>
 
   <div class="col-12 col-lg-3">
+    <p style="font-size: 25px; color: #00A3E4" class="font-weight-bold mb-0">Recente deals</p>
     @foreach($recentArticles as $key => $recentArticle)
     <div class="article d-flex flex-column py-3">
       <div class="row">

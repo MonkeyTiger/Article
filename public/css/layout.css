@@ -94,7 +94,7 @@ table td {
 }
 
 .user-menu {
-    background: #999;
+    background-image: linear-gradient(#2E2E2E, #535353, #2e2e2e);
     margin-bottom: 30px;
 }
 
@@ -115,4 +115,31 @@ table td {
 
 table td {
     vertical-align: middle !important;
+}
+
+.footer {
+    padding: 20px 40px;
+    background: #4F8690;
+    color: #fff;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer ul li {
+    list-style-type: none;
+}
+
+.footer ul li a {
+    color: #fff;
+}
+
+.user-body {
+    background: #37A7BA;
+}
+
+.container {
+    background: #fff;
+    padding: 0;
 }

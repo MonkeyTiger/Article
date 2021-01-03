@@ -20,6 +20,7 @@
       <ul class="menu">
         <li><a href="{{env('APP_URL')}}admin/article">Article manage</a></li>
         <li><a href="{{env('APP_URL')}}admin/header">Header structure</a></li>
+        <li><a href="{{env('APP_URL')}}admin/footer">Footer structure</a></li>
       </ul>
     </div>
     <div id="layout-content">
